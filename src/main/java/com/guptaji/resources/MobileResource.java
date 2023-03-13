@@ -13,6 +13,8 @@ public class MobileResource {
     // important link for quarkus
     // https://quarkus.io/guides/spring-web
 
+    // Here we are simply taking a list of String and performing a crud operations on it w/o using any Object & DB.
+
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public Response getMobileList(){

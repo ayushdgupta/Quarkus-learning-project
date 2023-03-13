@@ -39,7 +39,10 @@ public class MobileUtility {
 
     public static Response deleteMobileNumber(String mobileName){
         if (mobileList.contains(mobileName)){
-            mobileList = mobileList.stream().filter(tempMobileName -> !tempMobileName.equalsIgnoreCase(mobileName)).collect(Collectors.toList());
+            mobileList = mobileList
+                    .stream()
+                    .filter(tempMobileName -> !tempMobileName.equalsIgnoreCase(mobileName))
+                    .collect(Collectors.toList());
             return Response.ok(mobileList).build();
         }
         // we can also use simple remove function
